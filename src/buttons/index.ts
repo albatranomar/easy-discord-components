@@ -49,7 +49,7 @@ export class ButtonsBox {
         return this;
     }
 
-    public fetch(): ActionRowBuilder<ButtonBuilder>[] {
+    public get fetch(): ActionRowBuilder<ButtonBuilder>[] {
         let finalBox = [];
         for (let i = 0; i < this.buttonBox.length; i++) {
             const actionrow = this.buttonBox[i];
