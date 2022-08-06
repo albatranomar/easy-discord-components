@@ -48,7 +48,7 @@ client.on('interactionCreate', async interaction  => {
 		label:  "Click me!",
 		style:  ButtonStyle.Primary
 	});
-	let  row = Row([
+	let row = Row([
 		button	
 	]);
 	await interaction.reply({
@@ -68,17 +68,17 @@ const { ButtonsBox } = require('easy-discord-components');
 client.on('interactionCreate', async  interaction  => {
 	if (!interaction.isChatInputCommand() || interaction.isAutocomplete()) return;
 
-	let  buttonsBox = new  ButtonsBox();
+	let buttonsBox = new ButtonsBox();
 
 	for (let  i = 1; i <= 25; i++) {
 		buttonsBox.addButton({
-		customId:  `btn-${i}`,
-		label:  `${i}`,
-		style:  Math.floor(Math.random() * 4) + 1
+            customId:  `btn-${i}`,
+            label:  `${i}`,
+            style:  Math.floor(Math.random() * 4) + 1
 		})
 	}
-	await  interaction.reply({
-		components:  buttonsBox.fetch
+	await interaction.reply({
+		components: buttonsBox.fetch
 	});
 });
 ```
@@ -88,21 +88,21 @@ client.on('interactionCreate', async  interaction  => {
 ```js
 const { SelectMenu } = require('easy-discord-components');
 
-client.on('interactionCreate', async  interaction  => {
+client.on('interactionCreate', async interaction  => {
 	if (!interaction.isChatInputCommand() || interaction.isAutocomplete()) return;
 
-	let  selectMenu = new  SelectMenu()
+	let selectMenu = new SelectMenu()
 		.setCustomId('my_menu')
 		.setPlaceholder('Click here!');
 
-	for (let  i = 0; i < 5; i++) {
+	for (let i = 0; i < 5; i++) {
 		selectMenu.addOption({
-		label:  `Option (${i + 1})`,
-		value:  i.toString(),
+            label: `Option (${i + 1})`,
+            value: i.toString(),
 		})
 	}
 	
-	await  interaction.reply({
+	await interaction.reply({
 		components: [selectMenu.fetch]
 	});
 });
@@ -117,24 +117,24 @@ client.on('interactionCreate', async  interaction  => {
 const { TextInputStyle } = require('discord.js');
 const { Modal } = require('easy-discord-components');
 
-client.on('interactionCreate', async  interaction  => {
+client.on('interactionCreate', async interaction  => {
 	if (!interaction.isChatInputCommand() || interaction.isAutocomplete()) return;
 
-	let  modal = new Modal()
+	let modal = new Modal()
 	.setCustomId('my_modal')
 	.setTitle('Cool Modal')
 	.addTextInput({
-		customId:  'favoriteColor',
-		label:  "What's your favorite color?",
-		style:  TextInputStyle.Short
+		customId: 'favoriteColor',
+		label: "What's your favorite color?",
+		style: TextInputStyle.Short
 	})
 	.addTextInput({
-		customId:  'hobbies',
-		label:  "What's some of your favorite hobbies?",
-		style:  TextInputStyle.Paragraph
+		customId: 'hobbies',
+		label: "What's some of your favorite hobbies?",
+		style: TextInputStyle.Paragraph
 	});
 	
-	await  interaction.showModal(modal);
+	await interaction.showModal(modal);
 });
 ```
 ![modal result](https://github.com/albatranomar/easy-discord-components/blob/main/screenshots/modals_result.png?raw=true)
@@ -144,18 +144,15 @@ client.on('interactionCreate', async  interaction  => {
 ### Discord Basic Container
 ```js
 const { ButtonStyle } = require('discord.js');
-
 const { Row, Button, SelectMenu } = require('easy-discord-components');
-
-  
 
 client.on('interactionCreate', async  interaction  => {
 	if (!interaction.isChatInputCommand() || interaction.isAutocomplete()) return;
 
 	let  buttons = Row([
-		Button({ customId:  "a_btn", label:  "Button A", style:  ButtonStyle.Success }),
-		Button({ customId:  "b_btn", label:  "Button B", style:  ButtonStyle.Danger }),
-		Button({ customId:  "c_btn", label:  "Button C", style:  ButtonStyle.Primary })
+		Button({ customId: "a_btn", label: "Button A", style: ButtonStyle.Success }),
+		Button({ customId: "b_btn", label: "Button B", style: ButtonStyle.Danger }),
+		Button({ customId: "c_btn", label: "Button C", style: ButtonStyle.Primary })
 	]);
 
 	let  selectMenu = new  SelectMenu()
@@ -164,12 +161,12 @@ client.on('interactionCreate', async  interaction  => {
 
 	for (let  i = 0; i < 5; i++) {
 		selectMenu.addOption({
-			label:  `Option (${i + 1})`,
-			value:  i.toString(),
+			label: `Option (${i + 1})`,
+			value: i.toString(),
 		})
 	}
 
-	await  interaction.reply({
+	await interaction.reply({
 		components: [
 			buttons,
 			selectMenu.fetch
@@ -183,10 +180,10 @@ client.on('interactionCreate', async  interaction  => {
 const { ButtonStyle } = require('discord.js');
 const { Container, Row, Button, SelectMenu } = require('easy-discord-components');
 
-client.on('interactionCreate', async  interaction  => {
+client.on('interactionCreate', async interaction  => {
 	if (!interaction.isChatInputCommand() || interaction.isAutocomplete()) return;
 
-	let  container = new  Container();
+	let container = new Container();
 	
 	let  buttons = Row([
 		Button({ customId:  "a_btn", label:  "Button A", style:  ButtonStyle.Success }),
