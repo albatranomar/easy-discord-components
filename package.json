@@ -1,0 +1,30 @@
+{
+  "name": "easy-discord-components",
+  "version": "1.0.0",
+  "description": "This package is designed to make it easier to work with message components",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/albatranomar/easy-discord-components.git"
+  },
+  "keywords": [
+    "discord",
+    "disocrd-components",
+    "discord-buttons",
+    "discord-select-menus"
+  ],
+  "author": "albatranomar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/albatranomar/easy-discord-components/issues"
+  },
+  "homepage": "https://github.com/albatranomar/easy-discord-components#readme",
+  "devDependencies": {
+    "@types/node": "^18.6.4",
+    "typescript": "^4.7.4"
+  }
+}
