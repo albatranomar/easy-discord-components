@@ -15,7 +15,8 @@
     "discord",
     "disocrd-components",
     "discord-buttons",
-    "discord-select-menus"
+    "discord-select-menus",
+    "discord-modals"
   ],
   "author": "albatranomar",
   "license": "ISC",
