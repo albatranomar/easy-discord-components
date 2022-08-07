@@ -7,7 +7,7 @@
 </h3>
 
 ## About
-I made this package to make it easier to work with the message components. Without getting worry about the `ActionRow` and types issues that might come along with it.
+I made this package to make it easier to work with the message components in `discord.js`. Without getting worry about the `ActionRow` and types issues that might come along with it.
 
 ## Map
 
