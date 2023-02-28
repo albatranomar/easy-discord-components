@@ -26,7 +26,7 @@ I made this package to make it easier to work with the message components in `di
 <div align="center">
 <img src="https://img.shields.io/badge/Node js- >= 18.5-yellowgreen?style=flat&logo=node.js" alt="nodejs Badge" height="25"> 
   <img src="https://img.shields.io/badge/Npm - >= 8.12.1-yellowgreen?style=flat&logo=npm" alt="npm Badge" height="25"> 
-<img src="https://img.shields.io/badge/Discord.js - >= 14.0.2-blueviolet?style=flat&logo=discord" alt="Discord Badge" height="25">
+<img src="https://img.shields.io/badge/Discord.js - >= 14.7.1-blueviolet?style=flat&logo=discord" alt="Discord Badge" height="25">
 </div>
 
 ```bash

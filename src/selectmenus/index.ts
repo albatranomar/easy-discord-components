@@ -1,13 +1,14 @@
-import { ActionRowBuilder, SelectMenuBuilder, SelectMenuComponentData, SelectMenuComponentOptionData } from "discord.js";
+import { ActionRowBuilder, SelectMenuBuilder, StringSelectMenuOptionBuilder } from "@discordjs/builders";
+import { APISelectMenuOption, APIStringSelectComponent, SelectMenuComponentOptionData } from "discord.js";
 
 export class SelectMenu extends SelectMenuBuilder {
     public selectMenuOptions: SelectMenuComponentOptionData[] = [];
 
-    constructor(data: Partial<SelectMenuComponentData>) {
+    constructor(data: Partial<APIStringSelectComponent>) {
         super(data);
     }
 
-    public addOption(info: SelectMenuComponentOptionData): SelectMenu {
+    public addOption(info: APISelectMenuOption | StringSelectMenuOptionBuilder): SelectMenu {
         return this.addOptions([info]);
     }
 
